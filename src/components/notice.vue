@@ -1,3 +1,5 @@
 <template>
-  <h2>我 最新公告</h2>
+  <div id="notice">
+    <h1>公告</h1>
+  </div>
 </template>

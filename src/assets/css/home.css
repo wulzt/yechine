@@ -49,7 +49,7 @@
 }
 .content {
   width: 1133px;
-  height: 415px;
+  height: 425px;
   border: 1px solid #03329a;
 }
 .con-nav {
@@ -88,8 +88,8 @@
   display: flex;
 }
 .pro-menu{
-  width: 267px;
-  height: 360px;
+  width: 265px;
+  height: 370px;
   display: flex;
   flex-direction: column;
   padding-top: 25px;
@@ -105,8 +105,9 @@
 }
 .pro-menu +div{
   width: 866px;
-  height: 360px;
+  height: 370px;
 }
-.c-show{
-  display: block;
+.pro-menu .proActive{
+  background-color: #03329a;
+  color: #ffffff;
 }
