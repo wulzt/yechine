@@ -111,3 +111,98 @@
   background-color: #03329a;
   color: #ffffff;
 }
+
+.newCommand{
+  width: 1133px;
+  border-bottom: 2px solid #2e4794;
+  margin: 0 auto;
+}
+.newCommand>p{
+  line-height: 40px;
+  font-size: 18px;
+  border-bottom: 2px solid #2e4794;
+  background: url('../newCommandbg.png') no-repeat;
+  background-position: center;
+  color: #ffffff;
+}
+.nC-box ul{
+  display: flex;
+  justify-content: space-between;
+  margin: 40px auto 29px;
+  font-size: 14px;
+}
+.newCommand input{
+  line-height: 31px;
+  width: 110px;
+  background-color: #2e4794;
+  color: #ffffff;
+  border-style: none;
+  margin-bottom: 14px;
+}
+
+
+.sectionTab{
+  width: 1133px;
+  height: 410px;
+  margin: 63px auto 0;
+  border: 1px solid #2e4794;
+}
+.sec-ul li{
+  width: 283px;
+  line-height: 48px;
+  background-color: #2e4794;
+  color: #ffffff;
+}
+.sectionTab .secActive{
+  background-color: white;
+  color: #03329a;
+  border: none;
+}
+.tech ul{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 54px;
+}
+.tech ul li{
+  height: 274px;
+  width: 225px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+}
+.tech p{
+  margin-top: 12px;
+  width: 225px;
+  font-size: 12px;
+}
+.tech .btn{
+  font-size: 14px;
+  width: 44px;
+  height: 20px;
+  background-color: #f4f4f8;
+  border: 1px solid #03329a;
+}
+.web ul{
+  display: flex;
+  justify-content: space-around;
+  padding: 27px;
+}
+.web li{
+  width: 281px;
+  text-align: center;
+}
+.web li img+p {
+  font-size: 16px;
+  font-weight:bold;
+  width: 240px;
+  display: inline-block;
+  line-height: 25px;
+}
+.web li p:last-child{
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 25px;
+  margin-top: 10px;
+  text-align: left;
+}
