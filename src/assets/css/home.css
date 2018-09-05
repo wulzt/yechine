@@ -1,3 +1,8 @@
+.nC-box img{
+  width: 179px;
+  height: 179px;
+  border:1px solid #898989;
+}
 .bannerBox{
   background: url('../banner.jpg');
   background-size: cover;
@@ -7,6 +12,31 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+.welcome{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: left;
+  width: 269px;
+  height: 192px;
+  margin-right: 47px;
+  padding-left: 15px;
+  background-color: rgba(255,255,255,0.95);
+  border: 1px solid #03329a;
+  color: #03329a;
+  font-size: 14px;
+  text-align: left;
+}
+.welcome input[type='button']{
+  width: 70px;
+  height: 30px;
+  font-size: 14px;
+  color: white;
+  border: 1px solid #2e4794;
+  background-color: #2e4794;
+  margin-left: 100px;
+  margin-top: 20px;
 }
 #login{
   width: 269px;
@@ -42,10 +72,12 @@
   margin-top: 17px;
 }
 .contentBox{
+  width: 1133px;
   height: 500px;
   display: flex;
   justify-content: center;;
   align-items: center;
+  margin: 0 auto;
 }
 .content {
   width: 1133px;
@@ -205,4 +237,46 @@
   line-height: 25px;
   margin-top: 10px;
   text-align: left;
+}
+.food ul{
+  display: flex;
+  flex-wrap: wrap;
+  height: 340px;
+  align-content: space-between;
+  margin-top: 11px;
+}
+.food li{
+  width: 1020px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.foodtext{
+  text-align: left;
+  padding-left: 26px;
+}
+.foodtext p:first-child{
+  font-size: 16px;
+}
+.foodtext p:first-child{
+  font-size: 16px;
+}
+.foodtext p:last-child{
+  padding-top: 9px;
+  font-size: 14px;
+  line-height: 25px;
+}
+.newApp ul{
+  display: flex;
+  width: 880px;
+  margin: 23px auto 0;
+  justify-content: space-between;
+}
+.newApp ul li{
+  width: 238px;
+  font-size: 14px;
+  line-height: 30px;
+}
+.newApp p{
+    text-align: left;
 }

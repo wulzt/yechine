@@ -1,0 +1,129 @@
+.h42 li {
+  height: 42px;
+  font-size: 18px;
+  color: #ffffff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.h42 li span{
+  margin: 0 8px;
+}
+.topbar p{
+  text-align: left;
+  margin: 20px 0 32px;
+}
+.companyIntro{
+  width: 1000px;
+  height: 370px;
+  background-color: #f4f4f8;
+  margin: 0 auto 79px;
+}
+.companyIntro >div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 34px;
+}
+.companyIntro >div p{
+  width: 631px;
+  line-height: 40px;
+  text-align: left;
+  text-indent: 35px;
+}
+.companyIntro>p{
+  font-size: 48px;
+  padding: 23px 0;
+  position: relative;
+}
+.companyIntro>p::after{
+  content: '';
+  position: absolute;
+  width: 118px;
+  height: 2px;
+  background: #f5535b;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.ad-title p:first-child,
+.map-title p:first-child{
+  font-size: 30px;
+  padding-bottom: 8px;
+  position: relative;
+}
+.ad-title p:first-child::after{
+  content: '';
+  position: absolute;
+  width: 534px;
+  height: 2px;
+  background: #f5535b;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.ad-title p:last-child,
+.map-title p:last-child{
+  font-size: 14px;
+  padding-top: 12px;
+  padding-bottom: 47px;
+}
+.con-t{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.con-t span:first-child{
+  display: inline-block;
+  width: 35px;
+  line-height: 37px;
+  background-color: #2e4794;
+  color: #fff;
+  font-size: 24px;
+  border-radius: 5px;
+}
+.con-t span:last-child{
+  display: inline-block;
+  width: 170px;
+  line-height: 35px;
+  border: 2px solid #2e4794;
+  font-size: 18px;
+  background-color: #f4f4f8;
+  border-radius: 5px;
+  margin-left: 3px;
+}
+.con-msg{
+  width: 330px;
+  line-height: 30px;
+  text-align: left;
+  padding-top: 18px;
+  text-indent:35px;
+}
+.ad-con ul{
+  width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.ad-con li{
+  margin-bottom: 40px;
+}
+.map-title p:first-child::after{
+  content: '';
+  position: absolute;
+  width: 308px;
+  height: 2px;
+  background: #f5535b;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.map{
+  margin-top: 50px;
+}
+.map img{
+  margin-top: -25px;
+  margin-bottom: 85px;
+}

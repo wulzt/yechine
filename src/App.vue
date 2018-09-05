@@ -1,22 +1,44 @@
 <template>
   <div id="app">
+    <SideBox></SideBox>
     <Header></Header>
-    <router-view></router-view>
+    <router-view v-if="isRouterAlive"></router-view>
     <Footer></Footer>
   </div>
 </template>
 
 <script>
-
+import SideBox from './components/SideBox'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import store from './store/index.js'
 
 export default {
   name: 'app',
+  provide (){
+    return {
+     reload:this.reload
+    }
+  },
+  data(){
+    return {
+       isRouterAlive:true
+    }
+  },
+  methods:{
+    reload (){
+       this.isRouterAlive = false
+       this.$nextTick(function(){
+         this.isRouterAlive = true
+       })
+    }
+  },
   components: {
+    SideBox,
     Header,
     Footer,
   },
+
 }
 </script>
 
@@ -31,6 +53,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  min-width: 1200px;
 }
 
 h1, h2 {
@@ -49,6 +72,7 @@ li {
 
 a {
   text-decoration: none;
+  color: #2c3e50;
 }
 
 input {
@@ -58,5 +82,21 @@ input {
 }
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+.w-1200{
+  width: 1200px;
+  margin: 0 auto;
+}
+.h42{
+  height: 42px;
+  background-color: #2e4794;
+}
+.topbar{
+  width: 1200px;
+  margin: 0 auto;
+}
+.topbar p{
+  margin-top: 24px;
+  text-align: left;
 }
 </style>

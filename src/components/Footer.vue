@@ -6,11 +6,11 @@
     <div class="f-blue">
       <div class="f1024">
         <ul class="f-left">
-          <li>网站首页</li>
-          <li>关于我们</li>
+          <li><router-link :to="{path:'/'}">网站首页</router-link></li>
+          <li><router-link :to="{path:'/about'}">关于我们</router-link></li>
         </ul>
         <ul class="f-m-left">
-          <li>招贤纳士</li>
+          <li><router-link :to="{path:'/goodGuy'}">招贤纳士</router-link></li>
           <li>产品中心</li>
         </ul>
         <ul class="f-m-right">
@@ -45,6 +45,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 5px;
 }
 .f-blue{
   height: 48px;
@@ -58,5 +59,8 @@
 }
 .f-p{
   font-size: 12px;
+}
+.f1024 a{
+  color: white;
 }
 </style>

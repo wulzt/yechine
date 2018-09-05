@@ -14,12 +14,13 @@
       </div>
       <div class="searchBox">
         <div class="s-input">
-          <input type="text" class="search" placeholder="请输入您要搜索的产品名次、型号或名称"/>
-          <input type="submit" class="s-submit" value="搜索"/>
+          <input type="text" class="search" placeholder="请输入您要搜索的产品名次、型号或名称" v-model="searchVal" @keyup.enter="searchIt"/>
+          <input type="submit" class="s-submit" value="搜索" @click="searchIt()"/>
         </div>
         <div class="s-hot">
           HOT:
-          <li v-for="(val,index) in hotList">
+          <li v-for="(val,index) in hotList"
+            @click="searchVal = val,searchIt()">
             {{val}}<span>{{val | line(index,hotList.length) }}</span>
           </li>
         </div>
@@ -34,9 +35,13 @@
 </template>
 
 <script>
+import store from '../store/index.js'
+
 export default {
+  inject:['reload'],
   data(){
     return{
+      searchVal:'',
       introList: [
         {img: require('../assets/1.png'), msg: '品种多'},
         {img: require('../assets/2.png'), msg: '货期短'},
@@ -48,14 +53,51 @@ export default {
       ],
       navList: [
         {msg:'个人',path:'/me'},
-        {msg:'首页',path:'/home'},
+        {msg:'首页',path:'/'},
         {msg:'关于',path:'/about'},
         {msg:'订购',path:'/contact'},
       ],
     }
   },
   methods: {
+    searchIt(){
+      var self = this
+      if(this.searchVal==''){
+        alert('输入不能为空')
+      }else{
+        localStorage.setItem("searchVal",this.searchVal);
+        $.ajax({
+          url: 'https://erienniu.xyz/api/search?page=1&keyword='+self.searchVal+'&select=',
+          type: "GET",
+          dataType: "jsonp", //指定服务器返回的数据类型
+          data: "{}",
+          success: function(data) {
+            var storage=window.localStorage;
 
+            console.log(data);
+            if(!window.localStorage){
+                alert("浏览器支持localstorage");
+                return false;
+            }else{
+                storage.setItem("result",JSON.stringify(data.data.item));
+            }
+            self.reload()
+          },
+          error: function(error) {
+            console.log(error)
+          }
+        });
+      }
+      this.$router.push({
+        path:'/search',
+        query: {
+          page: '1',
+          select: '',
+          keyword: this.searchVal,
+        },
+      })
+
+    }
   },
 }
 </script>
